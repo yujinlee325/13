@@ -12,3 +12,6 @@
 #include <stdio.h>
 
 #endif /* keywords_h */
+
+int count_word(char* word);
+void print_word(void);
