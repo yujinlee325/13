@@ -8,26 +8,24 @@
 
 #include <stdio.h>
 
-struct student{
-    int ID ;
-    char name[100];
-    double grade ;
-    
-    
-};
 
 int main(void){
-    struct student s1 = {1810751, "YuJin", 4.3} ;
+    FILE* fp ;
+    char filename[100];
     
-    s1.ID = 456123;
-    s1.grade = 2.0;
+    //file open
+    printf("input the file name : ");
+    scanf("%s", filename);
     
-    printf("ID, %d\n", s1.ID);
-    printf("name, %s\n", s1.name);
-    printf("grade, %f\n", s1.grade);
+    if ((fp = fopen(filename, "r")) == NULL)
+    {
+        printf("input filename is invalid (%s)\n", filename);
+        return -1 ;
+    }
     
+    //bring words from fp
     
+    //bring a word
     
-    
-    
+    fclose(filename);
 }
