@@ -53,7 +53,6 @@ int main(void){
     FILE* fp ;
     char filename[100];
     char word[100];
-    
     int cnt;
     
     //file open
@@ -65,7 +64,13 @@ int main(void){
         printf("input filename is invalid (%s)\n", filename);
         return -1 ;
     }
+    //bring words from fp
+    while (fget_word(fp, word) != 0) {//bring a word
+            count_word(word);
+    }
+    print_word();
     
+    /*
     cnt = fget_word(fp, word);
     printf("%s (%i)\n", word, cnt);
     
@@ -74,7 +79,7 @@ int main(void){
     
     cnt = fget_word(fp, word);
     printf("%s (%i)\n", word, cnt);
-    
+    */
    
     
     fclose(fp);
